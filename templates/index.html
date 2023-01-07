@@ -9,6 +9,7 @@
 </head>
 <body>
     <form method="POST" action="insert" class="p-5">
+        {% csrf_token %}
         <div class="grid gap-6 mb-6 md:grid-cols-2">
             <div>
                 <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900">First name</label>

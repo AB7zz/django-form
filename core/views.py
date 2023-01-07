@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Database
 # Create your views here.
@@ -33,7 +33,7 @@ def insert(request):
         )
         db.save()
 
-        return redirect('/')
+        return redirect('display')
     return HttpResponse('<h1>Some error occurred...</h1>')
 
 
