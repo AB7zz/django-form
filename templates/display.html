@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Display</title>
 </head>
 <body>
-    
+    {% for input in inputs %}
+        <p>{{input.input1}}</p>
+        <p>{{input.input2}}</p>
+        <p>{{input.input3}}</p>
+        <p>{{input.input4}}</p>
+        <p>{{input.input5}}</p>
+        <p>{{input.input6}}</p>
+        <p>{{input.input7}}</p>
+        <!-- <p>{{input.input8}}</p> -->
+        <!-- <p>{{input.input9}}</p> -->
+    {% endfor %}
 </body>
 </html>

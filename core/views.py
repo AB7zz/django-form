@@ -35,3 +35,11 @@ def insert(request):
 
         return redirect('/')
     return HttpResponse('<h1>Some error occurred...</h1>')
+
+
+def display(request):
+    all_inputs = []
+
+    get_all_inputs = Database.objects.all()
+
+    return render(request, 'display.html', {'inputs' : get_all_inputs})
