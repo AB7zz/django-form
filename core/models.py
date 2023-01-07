@@ -1,9 +1,10 @@
 from django.db import models
+import uuid
 
 # Create your models here.
 
 class Database(models.Model):
-    id = models.UUIDFields(primary_key=true, default=uuid.uuid4)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     input1 = models.CharField(max_length=100)
     input2 = models.CharField(max_length=100)
     input3 = models.CharField(max_length=100)
