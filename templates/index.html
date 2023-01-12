@@ -1,62 +1,212 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <form method="POST" action="insert" class="p-5">
-        {% csrf_token %}
-        <div class="grid gap-6 mb-6 md:grid-cols-2">
-            <div>
-                <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900">First name</label>
-                <input name="input1" type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link rel="preconnect" href="https:/fonts.googleapis.com" />
+    <link rel="preconnect" href="https:/fonts.gstatic.com" crossorigin />
+    <link
+      href="https:/fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https:/cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- hero section naveen -->
+    <!-- events naaji -->
+    <!-- speakers section akhil -->
+    <!-- footer eldhose -->
+    <!-- registration form anton and nandhu krishnan -->
+
+    <header>
+      <div class="hero-container">
+        <div class="appbar">
+          <div class="appbar d-flex justify-content-between p-2 align-items-center">
+            <img src="{% static 'logo.png' %}" alt="logo" />
+
+            <img
+              src="{% static 'icon.png' %}"
+              alt="icon"
+              class="nav-icon"
+            />
+          </div>    
+          <div class="overlay">
+            <nav class="navbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <img src="{% static 'Frame26.png' %}" class="link-text" />
+                  <a class="link-text" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <img src="{% static 'Frame26.png' %}" class="link-text" />
+                  <a class="link-text" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <img src="{% static 'Frame26.png' %}" class="link-text" />
+                  <a class="link-text" href="#">Events</a>
+                </li>
+                <li class="nav-item">
+                  <img src="{% static 'Frame26.png' %}" class="link-text" />
+                  <a class="link-text" href="#">Milestones</a>
+                </li>
+                <li class="nav-item">
+                  <img src="{% static 'Frame26.png' %}" class="link-text" />
+                  <a class="link-text" href="#">Pre-Event</a>
+                </li>
+                <li class="nav-item">
+                  <img src="{% static 'Frame26.png' %}" class="link-text" />
+                  <a class="link-text" href="#">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <img src="{% static 'Frame26.png' %}" class="link-text" />
+                  <a class="link-text" href="#">Programs</a>
+                </li>
+                <li class="nav-item">
+                  <img src="{% static 'Frame26.png' %}" class="link-text" />
+                  <a class="link-text" href="#">Speakers</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="sub-container">
+          <div class="left-container">
+            <h1 id="content1" class="heading">SPACE UP 2023</h1>
+            <p id="paragraph" class="details">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+              tempor porttitor nunc. Duis dolor sem, tincidunt ac hendrerit
+              quis, ullamcorper vel purus. Aliquam imperdiet justo sed semper
+              mollis. Nullam iaculis aliquam augue, a pulvinar nisl lobortis
+              non. Sed fringilla mollis arcu, et maximus urna pretium vel. Donec
+              a ex velit. Donec mol
+            </p>
+            <a href="registrationform">
+              <button id="regbtn" class="register-button">Register ></button>
+            </a>
+          </div>
+
+          <div class="right-container">
+            <img src="{% static 'circles.png' %}" height="100%" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="speakers" >
+        <h2>SPEAKERS</h2>
+        
+        <div class="row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'man.png' %}" class="rounded-end-circle" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Name</h3>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900">Last name</label>
-                <input name="input2" type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Doe" required>
-            </div>
-            <div>
-                <label for="company" class="block mb-2 text-sm font-medium text-gray-900">Company</label>
-                <input name="input3" type="text" id="company" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Flowbite" required>
-            </div>  
-            <div>
-                <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Phone number</label>
-                <input name="input4" type="tel" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
-            </div>
-            <div>
-                <label for="website" class="block mb-2 text-sm font-medium text-gray-900">Website URL</label>
-                <input name="input5" type="url" id="website" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="flowbite.com" required>
-            </div>
-            <div>
-                <label for="visitors" class="block mb-2 text-sm font-medium text-gray-900">Unique visitors (per month)</label>
-                <input name="input6" type="number" id="visitors" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required>
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'man.png' %}" class="rounded-end-circle" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Name</h3>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="mb-6">
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email address</label>
-            <input name="input7" type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="john.doe@company.com" required>
-        </div>
-        <div class="mb-6">
-            <label for="visitors" class="block mb-2 text-sm font-medium text-gray-900">Insert File</label>
-            <input name="input8" type="file" class="block w-full text-sm text-slate-500
-                file:mr-4 file:py-2 file:px-4
-                file:rounded-full file:border-0
-                file:text-sm file:font-semibold
-                file:bg-violet-50 file:text-violet-700
-                hover:file:bg-violet-100
-            "/>
-        </div>
-        <div class="flex items-start mb-6">
-            <div class="flex items-center h-5">
-            <input name="input9" id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
+    
+    
+        <div class="row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'man.png' %}" class="rounded-end-circle" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Name</h3>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'man.png' %}" class="rounded-end-circle" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Name</h3>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-    </form>
-</body>
+    
+        <div class="row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'man.png' %}" class="rounded-end-circle" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Name</h3>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'man.png' %}" class="rounded-end-circle" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Name</h3>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        </div>
+  </body>
 </html>

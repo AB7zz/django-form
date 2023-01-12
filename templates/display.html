@@ -1,23 +1,62 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display</title>
+    <title>Document</title>
 </head>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+        td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+        tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
 <body>
-    {% for input in inputs %}
-        <p>{{input.input1}}</p>
-        <p>{{input.input2}}</p>
-        <p>{{input.input3}}</p>
-        <p>{{input.input4}}</p>
-        <p>{{input.input5}}</p>
-        <p>{{input.input6}}</p>
-        <p>{{input.input7}}</p>
-        <!-- <p>{{input.input8}}</p> -->
-        <!-- <p>{{input.input9}}</p> -->
-        <hr>
-    {% endfor %}
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>DOB</th>
+                <th>School/College</th>
+                <th>University</th>
+                <th>SEDS Member</th>
+                <th>Proof</th>
+            </tr>
+            {% for input in inputs reversed %}
+                <tr>
+                    <td>{{input.name}}</td>
+                    <td>{{input.email}}</td>
+                    <td>{{input.phone}}</td>
+                    <td>{{input.dob}}</td>
+                    <td>{{input.seds}}</td>
+                    <td>{{input.schcol}}</td>
+                    <td>{{input.uni}}</td>
+                    <td>
+                        <a href="{{input.proof.url}}"><img style="width: 100px; height: 100px;" src="{{input.proof.url}}"></a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <!-- <p>{{input.email}}</p>
+        <p>{{input.phone}}</p>
+        <p>{{input.seds}}</p>
+        <p>{{input.schcol}}</p>
+        <p>{{input.uni}}</p>
+        <a href="{{input.proof.url}}"><img src="{{input.proof.url}}"></a> -->
 </body>
 </html>

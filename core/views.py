@@ -8,33 +8,39 @@ from .models import Database
 def index(request):
     return render(request, 'index.html')
 
+def registration(request):
+    return render(request, 'registrationform.html')
+
 def insert(request):
     if request.method == "POST":
-        input1 = request.POST['input1']
-        input2 = request.POST['input2']
-        input3 = request.POST['input3']
-        input4 = request.POST['input4']
-        input5 = request.POST['input5']
-        input6 = request.POST['input6']
-        input7 = request.POST['input7']
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        schcol = request.POST['schcol']
+        uni = request.POST['uni']
+        seds = request.POST['seds']
+        dob = request.POST['dob']
+        proof = request.FILES.get('proof')
         # input8 = request.POST['input8']
         # input9 = request.POST['input9']
 
         db = Database.objects.create(
-            input1 = input1,
-            input2 = input2,
-            input3 = input3,
-            input4 = input4,
-            input5 = input5,
-            input6 = input6,
-            input7 = input7,
+            name = name,
+            email = email,
+            phone = phone,
+            schcol = schcol,
+            uni = uni,
+            seds = seds,
+            dob = dob,
+            proof = proof
             # input8 = input8,
             # input9 = input9
         )
         db.save()
 
-        return redirect('display')
+        return redirect('/')
     return HttpResponse('<h1>Some error occurred...</h1>')
+
 
 
 def display(request):
@@ -42,4 +48,6 @@ def display(request):
 
     get_all_inputs = Database.objects.all()
 
+    for data in get_all_inputs:
+        print(data.name)
     return render(request, 'display.html', {'inputs' : get_all_inputs})
